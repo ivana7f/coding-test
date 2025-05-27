@@ -24,6 +24,7 @@
   &__item {
     display: inline-block;
     transition: transform 0.1s ease;
+    letter-spacing: $letter-spacing-bg;
 
     &:hover {
       transform: scale(1.1);
