@@ -1,6 +1,13 @@
-// General reset
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/grid";
+@import "layout/navigation";
+
+@import "components/product";

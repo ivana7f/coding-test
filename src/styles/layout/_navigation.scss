@@ -1,0 +1,53 @@
+.navigation {
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 7rem 0rem 2rem;
+
+  &__logo {
+    line-height: 0;
+    img {
+      width: 62px;
+      height: 49px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  &__item {
+    display: inline-block;
+    transition: transform 0.1s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-text-primary;
+    font-size: $font-size-14;
+    line-height: $line-height-smaller;
+  }
+
+  &__widgets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    &__item {
+      border: none;
+      background-color: $color-white;
+      cursor: pointer;
+    }
+  }
+}

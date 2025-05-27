@@ -3,11 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,500,"
+      rel="stylesheet"
+    />
     <title>Coding test</title>
     <link rel="stylesheet" href="./styles/main.scss" />
     <script src="./scripts/main.js" type="module" defer></script>
   </head>
+
   <body>
-    <div>Test test</div>
+    <section class="navigation">
+      <a href="/" class="navigation__logo">
+        <img src="assets/img/logo.png" alt="Home Logo" />
+      </a>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Shop</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Science</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Press</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Blogs</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Tutorial</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="navigation__widgets">
+        <button class="navigation__widgets__item" aria-label="Search">
+          <img src="assets/img/search.svg" alt="search" />
+        </button>
+
+        <button class="navigation__widgets__item" aria-label="Profile">
+          <img src="assets/img/profile.svg" alt="profile" />
+        </button>
+
+        <button class="navigation__widgets__item" aria-label="Cart">
+          <img src="assets/img/cart.svg" alt="search" />
+        </button>
+      </div>
+    </section>
+
+    <section class="product">
+      <div class="product__image">
+        <img src="assets/img/product_image.png" alt="product image" />
+      </div>
+      <div class="product__description"></div>
+
+      <div class="product__ingredients">
+        <div class="product__ingredients__item">
+          <div class="product__ingredients__item-header">
+            <h3>Ingredients 1</h3>
+            <button class="toggle-btn" aria-label="Toggle description">
+              +
+            </button>
+          </div>
+          <p class="product__ingredients__item-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor
+            commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor
+            posuere ac ut.
+          </p>
+        </div>
+
+        <div class="product__ingredients__item">
+          <div class="product__ingredients__item-header">
+            <h3>Ingredients 2</h3>
+            <button class="toggle-btn" aria-label="Toggle description">
+              +
+            </button>
+          </div>
+          <p class="product__ingredients__item-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor
+            commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor
+            posuere ac ut.
+          </p>
+        </div>
+
+        <div class="product__ingredients__item">
+          <div class="product__ingredients__item-header">
+            <h3>Ingredients 3</h3>
+            <button class="toggle-btn" aria-label="Toggle description">
+              +
+            </button>
+          </div>
+          <p class="product__ingredients__item-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor
+            commodo ullamcorper a lacus vestibulum. Luctus accumsan tortor
+            posuere ac ut.
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

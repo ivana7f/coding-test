@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  font-family: $font-poppins;
+  background-color: $color-white;
+  font-weight: $font-weight-regular;
+}
+
+button {
+  border: none;
+  background-color: $color-white;
+  cursor: pointer;
+}
