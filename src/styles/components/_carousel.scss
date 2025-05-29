@@ -43,8 +43,12 @@
     }
 
     img {
-      width: 30rem;
+      width: 38rem;
       margin-bottom: 1rem;
+
+      @include respond(phone) {
+        width: 28rem;
+      }
     }
 
     .title,
