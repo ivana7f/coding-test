@@ -3,11 +3,26 @@
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto auto;
 
+  @include respond(phone) {
+    grid-template-columns: 1fr; // 1 column
+    grid-template-rows: auto; // Rows stack naturally
+  }
+
   &__image {
     grid-column: 1 / 4;
     grid-row: 1;
     img {
       width: 100%;
+    }
+
+    // &-desktop {
+    //   @include respond(phone) {
+    //     display: none;
+    //   }
+    // }
+
+    @include respond(phone) {
+      display: none;
     }
   }
 
@@ -15,6 +30,22 @@
     grid-column: 4 / 6;
     grid-row: 1;
     padding: 2rem 7rem 2rem 4rem;
+
+    @include respond(phone) {
+      grid-column: 1 / 2;
+      grid-row: 1;
+      background-color: $color-backgroud-darker;
+      padding: 2rem 2.5rem 2rem 2.5rem;
+    }
+  }
+
+  &__image-mobile {
+    display: none;
+
+    @include respond(phone) {
+      display: inline-block;
+      width: 100%;
+    }
   }
 
   &__breadcrumb {
@@ -22,6 +53,10 @@
     font-weight: $font-weight-light;
     letter-spacing: $letter-spacing-bg;
     margin-bottom: 4rem;
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__details {
@@ -29,6 +64,10 @@
       font-weight: $font-weight-regular;
       font-size: $font-size-28;
       padding-bottom: 1rem;
+
+      @include respond(phone) {
+        padding-top: 1rem;
+      }
     }
 
     &__subtitle,
@@ -114,7 +153,7 @@
       left: 0;
       height: 22px;
       width: 22px;
-      background-color: $color-white;
+      background-color: inherit;
       border: 1px solid $color-text-secondary;
       border-radius: 50%;
     }
@@ -156,7 +195,7 @@
     margin-top: 2rem;
     display: flex;
 
-    gap: 1rem;
+    gap: 2rem;
   }
 
   &__quantity {
@@ -170,9 +209,13 @@
     font-family: $font-lato;
     flex-shrink: 0;
 
+    @include respond(phone) {
+      width: 15rem;
+    }
+
     button {
       padding: 1rem;
-
+      background-color: inherit;
       &:first-child {
         padding-left: 0;
       }
@@ -214,6 +257,12 @@
     grid-column: 1 / 4;
     grid-row: 2;
     padding: 1rem 6rem;
+
+    @include respond(phone) {
+      grid-column: 1 / 2;
+      grid-row: 2;
+      padding: 1rem 2.5rem;
+    }
 
     &__item {
       border-bottom: 2px solid $color-text-secondary;

@@ -6,6 +6,10 @@
   padding-right: 10rem;
   margin-bottom: 10rem;
 
+  @include respond(phone) {
+    padding: 0 2.5rem;
+  }
+
   &__title {
     text-align: center;
     font-family: $font-lato;
@@ -33,6 +37,10 @@
     background: white;
     text-align: center;
     flex-shrink: 0;
+
+    @include respond(phone) {
+      padding-left: 0;
+    }
 
     img {
       width: 30rem;
@@ -74,9 +82,17 @@
 
   &.prev {
     left: 20;
+
+    @include respond(phone) {
+      left: 5;
+    }
   }
 
   &.next {
     right: 60;
+
+    @include respond(phone) {
+      right: 5;
+    }
   }
 }

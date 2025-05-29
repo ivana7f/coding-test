@@ -7,8 +7,22 @@
   justify-content: space-between;
   padding: 0.6rem 7rem 0rem 2rem;
 
+  &__menu {
+    display: none;
+
+    @include respond(phone) {
+      display: flex;
+      gap: 1.6rem;
+      order: 1;
+    }
+  }
+
   &__logo {
     line-height: 0;
+
+    @include respond(phone) {
+      order: 2;
+    }
     img {
       width: 62px;
       height: 49px;
@@ -45,10 +59,30 @@
     justify-content: center;
     gap: 1.6rem;
 
+    @include respond(phone) {
+      order: 3;
+    }
+
     &__item {
       border: none;
       background-color: $color-white;
       cursor: pointer;
+
+      &:first-child {
+        @include respond(phone) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include respond(phone) {
+    padding: 0.5rem 2rem;
+  }
+
+  &__nav {
+    @include respond(phone) {
+      display: none;
     }
   }
 }
